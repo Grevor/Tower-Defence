@@ -5,4 +5,4 @@
  * @author Anders
  *
  */
-package model.Abilitys;
+package model.abilitys;

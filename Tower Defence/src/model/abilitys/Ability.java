@@ -1,4 +1,4 @@
-package model.Abilitys;
+package model.abilitys;
 
 public class Ability {
 	private double cd;

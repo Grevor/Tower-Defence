@@ -1,4 +1,4 @@
-package model.Types;
+package model.types;
 
 public enum DamageType {
       normal;

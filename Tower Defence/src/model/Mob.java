@@ -1,9 +1,9 @@
 package model;
 
 
-import model.Types.ArmorType;
-import model.Types.DamageType;
 import model.collision.Collider;
+import model.types.ArmorType;
+import model.types.DamageType;
 
 public abstract class Mob extends Entity {
 
