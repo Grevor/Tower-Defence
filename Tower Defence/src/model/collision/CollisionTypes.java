@@ -1,7 +1,5 @@
 package model.collision;
 
-import java.util.Enumeration;
-
 public class CollisionTypes {
 	public static final long	GROUND	= enumerationToFlag(Enumerations.GROUND),
 										AIR = enumerationToFlag(Enumerations.AIR),
