@@ -1,5 +1,5 @@
 package model.Types;
 
-public enum DamgeType {
+public enum DamageType {
       normal;
 }

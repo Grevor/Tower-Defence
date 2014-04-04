@@ -13,4 +13,6 @@ public abstract class Entity {
 	
 	public abstract Collider getCollider();
 	
+	public abstract long getCollisionType(); 
+	
 }
