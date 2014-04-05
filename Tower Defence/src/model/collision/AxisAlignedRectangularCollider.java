@@ -1,7 +1,7 @@
 package model.collision;
 
 public class AxisAlignedRectangularCollider extends TranslateablePrimitiveCollider {
-	private double	width, height;
+	private double	halfWidth, halfHeight;
 
 	public AxisAlignedRectangularCollider(double x, double y, double width, double height) {
 		super(x, y);
@@ -11,14 +11,14 @@ public class AxisAlignedRectangularCollider extends TranslateablePrimitiveCollid
 	
 	public void setWidth(double w) {
 		if (w < 0)
-			throw new IllegalArgumentException("Negative width not allowed.");
-		width = w;
+			throw new IllegalArgumentException("Negative halfWidth not allowed.");
+		halfWidth = w/2;
 	}
 	
 	public void setHeight(double h) {
 		if (h < 0)
-			throw new IllegalArgumentException("Negative height not allowed.");
-		height = h;
+			throw new IllegalArgumentException("Negative halfHeight not allowed.");
+		halfHeight = h/2;
 	}
 	
 	public void setDimensions(double w, double h) {
@@ -27,10 +27,10 @@ public class AxisAlignedRectangularCollider extends TranslateablePrimitiveCollid
 	}
 	
 	public static boolean collides(AxisAlignedRectangularCollider A, AxisAlignedRectangularCollider B) {
-		return A.position.a1 < B.position.a1 + B.width &&
-				A.position.a1 + A.width > B.position.a1 &&
-				A.position.a2 < B.position.a2 + B.height &&
-				A.position.a2 + A.height > B.position.a2;
+		return A.position.a1 - A.halfWidth < B.position.a1 + B.halfWidth &&
+				A.position.a1 + A.halfWidth > B.position.a1 - B.halfWidth &&
+				A.position.a2 - A.halfHeight < B.position.a2 + B.halfHeight &&
+				A.position.a2 + A.halfHeight > B.position.a2 - B.halfHeight;
 	}
 
 }

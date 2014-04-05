@@ -18,5 +18,10 @@ public class RectangularCollider extends TransformablePrimitiveCollider {
 		this.width = width;
 		this.height = height;
 	}
+	
+	public static boolean collides(RectangularCollider A, RectangularCollider B) {
+		//TODO
+		return false;
+	}
 
 }

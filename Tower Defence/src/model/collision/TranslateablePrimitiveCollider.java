@@ -25,6 +25,7 @@ public abstract class TranslateablePrimitiveCollider implements PrimitiveCollide
 
 	@Override
 	public PrimitiveCollider transform(Transform transform) {
-		return this.translate(transform.getTranslation(null));
+		Transform.mult(transform, position, position);
+		return this;
 	}
 }
