@@ -16,4 +16,13 @@ public class HealtObject extends Entity{
 	}
 
 
+
+
+	@Override
+	public boolean exist() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
 }

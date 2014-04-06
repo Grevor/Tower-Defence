@@ -15,7 +15,7 @@ public abstract class Unit extends HealtObject implements Effectebul {
 	protected LinkedList <Ability> abilities;
 	protected LinkedList <Effeckt> effects;
 	protected double coldwonReduction;
-	
+	private double size;
 	
 	
 	public Unit(double hp,ArmorType armorType,LinkedList <Ability> abilities){
@@ -34,6 +34,10 @@ public abstract class Unit extends HealtObject implements Effectebul {
 	public void addEffect(Effeckt effect) {
 		effects.add(effect);
 		
+	}
+	
+	public LinkedList <Ability> getAbilities(){
+		return abilities;
 	}
 	
 	
@@ -71,5 +75,16 @@ public abstract class Unit extends HealtObject implements Effectebul {
 		return false;
 	}
 
+	
+	
+	@Override
+	public boolean exist() {
+		return !isDead();
+	}
+	
+	
+	public double getSize(){
+		return size;
+	}
 	
 }

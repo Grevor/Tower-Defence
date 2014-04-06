@@ -2,23 +2,19 @@ package model.abilities;
 
 import java.util.LinkedList;
 
-import org.ejml.data.FixedMatrix2_64F;
-
-import model.Entity;
 import model.Effeckts.Effeckt;
-import model.projectile.Projectile;
 
 
 public abstract class Ability {
 	
-	private double cd;
-	private double maxCd;
+	protected double cd;
+	protected double maxCd;
 	protected double speed;
 	private double range;
 	LinkedList <Effeckt> effect;
 	
 	
-	public abstract Projectile newProjectile(FixedMatrix2_64F position, Entity target);
+	//public abstract Projectile newProjectile(FixedMatrix2_64F position, Entity target);
 		
 	
 
@@ -37,17 +33,17 @@ public abstract class Ability {
 	
 	
 	/**
-	 * @param position
-	 * @param target
-	 * @return
+	 * @param position the curent posistion of the caster
+	 * @param target may be null
+	 * @return the new projectile
 	 */
-	public Projectile use(FixedMatrix2_64F position, Entity target){
+	/*public Projectile use(FixedMatrix2_64F position, Entity target){
 		if (ready()){
 			cd = maxCd;
 			return newProjectile(position, target);
 		}
 		return null;
-	}
+	}*/
 	
 	
 		public void update(long time){
@@ -64,6 +60,10 @@ public abstract class Ability {
 		cd -= time * (1 + modifire);
 	}
 	
+	
+	public double getRange(){
+		return range;
+	}
 	
 	
 }

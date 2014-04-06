@@ -12,6 +12,8 @@ public abstract class Entity implements ObjectWithCollider {
 		return position;
 	}
 	
+	public abstract boolean exist();
+	
 	public abstract Collider getCollider();
 	
 }
