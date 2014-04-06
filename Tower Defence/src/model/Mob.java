@@ -1,33 +1,30 @@
 package model;
 
 
-import model.collision.Collider;
+import java.util.List;
+
+import model.Effeckts.Effectebul;
+import model.abilities.Ability;
 import model.types.ArmorType;
-import model.types.DamageType;
 
-public abstract class Mob extends Entity {
 
-	private double hp;
-	private double damage;
-	private double attackSpeed;
-	private double attackSpeedCD;
+public abstract class Mob extends HealtObject implements Effectebul {
+
 	private ArmorType armorType;
-	private DamageType damageType;
+	private List <Ability> abilities;
 	
-	public Mob(double hp, double damage, double attackSpeed){
-		this(hp,damage,attackSpeed, ArmorType.normal, DamageType.normal);
+	public Mob(double hp){
+		this(hp,ArmorType.normal, null);
 	}
 
-	public Mob(double hp, double damage, double attackSpeed, ArmorType armorType, DamageType damageType){
+	public Mob(double hp,ArmorType armorType,List <Ability> abilities){
 		this.hp = hp;
-		this.damage = damage;
-		this.attackSpeed = attackSpeed;
 		this.armorType = armorType;
-		this.damageType = damageType;	
+		this.abilities = abilities;
 	}
 	
 	//returns the dmage of an attack, returns 0 if the attack isent ready 
-	public boolean attack(){
+	public boolean useAbility(){
 		//TODO
 		return false;
 	}
