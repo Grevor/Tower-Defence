@@ -2,12 +2,7 @@ package model;
 
 
 import java.util.LinkedList;
-import java.util.List;
 
-
-
-
-import model.Effeckts.Effeckt;
 import model.abilities.Ability;
 import model.types.ArmorType;
 

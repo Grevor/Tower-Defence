@@ -2,11 +2,11 @@ package model.abilities;
 
 import java.util.LinkedList;
 
-import org.ejml.data.FixedMatrix2_64F;
-
 import model.Entity;
 import model.Effeckts.Effeckt;
 import model.projectile.Projectile;
+
+import org.ejml.data.FixedMatrix2_64F;
 
 
 public abstract class Ability {

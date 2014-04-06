@@ -2,10 +2,10 @@ package model.projectile;
 
 import java.util.List;
 
-import org.ejml.data.FixedMatrix2_64F;
-
 import model.Entity;
 import model.Effeckts.Effeckt;
+
+import org.ejml.data.FixedMatrix2_64F;
 
 
 

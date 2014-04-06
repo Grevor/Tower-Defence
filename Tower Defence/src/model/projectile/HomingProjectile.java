@@ -2,11 +2,11 @@ package model.projectile;
 
 import java.util.List;
 
-import org.ejml.data.FixedMatrix2_64F;
-
 import model.Entity;
 import model.Effeckts.Effeckt;
 import model.collision.Collider;
+
+import org.ejml.data.FixedMatrix2_64F;
 
 public class HomingProjectile extends Projectile {
 

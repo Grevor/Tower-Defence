@@ -1,6 +1,5 @@
 package math;
 
-import org.ejml.alg.fixed.FixedOps2;
 import org.ejml.data.FixedMatrix2_64F;
 import org.ejml.data.FixedMatrix2x2_64F;
 

@@ -1,8 +1,8 @@
 package model.collision;
 
-import org.ejml.data.FixedMatrix2_64F;
-
 import math.Transform;
+
+import org.ejml.data.FixedMatrix2_64F;
 
 public abstract class TransformablePrimitiveCollider implements PrimitiveCollider {
 	protected Transform	transform;

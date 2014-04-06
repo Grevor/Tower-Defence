@@ -1,14 +1,13 @@
 package model.abilities;
 
 import java.util.LinkedList;
-import java.util.List;
-
-import org.ejml.data.FixedMatrix2_64F;
 
 import model.Entity;
 import model.Effeckts.Effeckt;
 import model.projectile.HomingProjectile;
 import model.projectile.Projectile;
+
+import org.ejml.data.FixedMatrix2_64F;
 
 public class HomingAbility extends Ability {
 
