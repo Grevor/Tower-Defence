@@ -2,8 +2,6 @@ package model.collision;
 
 import java.awt.Point;
 
-import math.MatrixUtilities;
-
 public class CollisionUtilities {
 	public static boolean collides(Collider A, Collider B) {
 		// TODO

@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import model.Effeckts.Effeckt;
 
 
+
 public abstract class Ability {
 	
 	protected double cd;
