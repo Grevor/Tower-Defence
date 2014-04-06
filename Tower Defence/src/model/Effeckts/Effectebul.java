@@ -1,12 +1,28 @@
 package model.Effeckts;
 
-import java.util.List;
+import java.util.LinkedList;
 
 public interface Effectebul {
 
-	public void changeMovmentSpeed(double modifre);
-	public void changeAttackSpeed(double modifre);
-	public boolean changeHp(double modifre);
-	public List<Effeckt> getEffects();
-//	public void setEffeckt(List<Effeckt> effect);
+	/**
+	 * @param change Movment Speed whit modifire % 
+	 */
+	public void changeMovmentSpeed(double modifire);
+	/**
+	 * @param  @param change Attack Speed whit modifire %
+	 */
+	public void changeAttackSpeed(double modifire);
+	/**
+	 * @param change Hp whit modifire (negativ is damage, posetiv is heal)
+	 * @return true if objeckts is dead
+	 */
+	public boolean changeHp(double modifire);
+	/**
+	 * @return get all the effeckts on objeckt
+	 */
+	public LinkedList<Effeckt> getEffects();
+	/**
+	 * @param effect add an effect on objeckts
+	 */
+	public void addEffect(Effeckt effect);
 }

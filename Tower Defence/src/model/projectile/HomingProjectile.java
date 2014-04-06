@@ -1,4 +1,4 @@
-package model.abilities.projectile;
+package model.projectile;
 
 import java.util.List;
 
@@ -10,8 +10,11 @@ import model.collision.Collider;
 
 public class HomingProjectile extends Projectile {
 
+	Entity target;
+	
 	public HomingProjectile(List<Effeckt> effeckts, double speed, FixedMatrix2_64F position, Entity target) {
-		super(effeckts, speed,position,target);
+		super(effeckts, speed,position);
+		this.target = target;
 	}
 
 	@Override

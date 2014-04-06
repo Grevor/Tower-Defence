@@ -1,5 +1,5 @@
 package model.types;
 
 public enum EffecktType {
-		Damage,Heal,attackSpeed,MovmentSpeedChange;
+	DAMAGE,HEAL,ATTACK_SPEED,MOVMENT_SPEED;
 }

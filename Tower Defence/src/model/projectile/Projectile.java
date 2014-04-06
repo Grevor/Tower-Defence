@@ -1,4 +1,4 @@
-package model.abilities.projectile;
+package model.projectile;
 
 import java.util.List;
 
@@ -13,10 +13,9 @@ public abstract class Projectile extends Entity {
 
 	private List <Effeckt> effeckts;
 	double speed;
-	FixedMatrix2_64F position;
-	Entity target;
+
 	
-	public Projectile(List <Effeckt> effeckts, double speed, FixedMatrix2_64F position, Entity target) {
+	public Projectile(List <Effeckt> effeckts, double speed, FixedMatrix2_64F position) {
 		this.effeckts = effeckts;
 		this.speed = speed;
 		this.position = position;

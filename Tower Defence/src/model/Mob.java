@@ -1,42 +1,36 @@
 package model;
 
 
+import java.util.LinkedList;
 import java.util.List;
 
-import model.Effeckts.Effectebul;
+
+
+
+import model.Effeckts.Effeckt;
 import model.abilities.Ability;
 import model.types.ArmorType;
 
 
-public abstract class Mob extends HealtObject implements Effectebul {
+public class Mob extends Unit {
 
-	private ArmorType armorType;
-	private List <Ability> abilities;
+	protected double standardMovmentSpeed;
+	protected double curnetMovmentSpeed;
 	
 	public Mob(double hp){
 		this(hp,ArmorType.normal, null);
 	}
 
-	public Mob(double hp,ArmorType armorType,List <Ability> abilities){
-		this.hp = hp;
-		this.armorType = armorType;
-		this.abilities = abilities;
+	public Mob(double hp,ArmorType armorType,LinkedList <Ability> abilities){
+		super(hp, armorType, abilities);
 	}
 	
-	//returns the dmage of an attack, returns 0 if the attack isent ready 
-	public boolean useAbility(){
-		//TODO
-		return false;
+
+	@Override
+	public void changeMovmentSpeed(double modifire) {
+		curnetMovmentSpeed = standardMovmentSpeed * modifire;
 	}
-	
-	//damge the  mob return true if the mob is dead
-	public boolean damage(double damage){
-		hp -= damage;
-		return this.isDead();
-	}
-	
-	public boolean isDead(){
-	 return hp > 0;
-	}
+
+
 	
 }
