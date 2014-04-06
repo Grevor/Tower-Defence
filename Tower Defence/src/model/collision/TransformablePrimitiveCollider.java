@@ -4,7 +4,7 @@ import org.ejml.data.FixedMatrix2_64F;
 
 import math.Transform;
 
-public class TransformablePrimitiveCollider implements PrimitiveCollider {
+public abstract class TransformablePrimitiveCollider implements PrimitiveCollider {
 	protected Transform	transform;
 
 	protected TransformablePrimitiveCollider() {

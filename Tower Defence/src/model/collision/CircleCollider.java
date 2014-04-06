@@ -4,8 +4,9 @@ import math.MatrixUtilities;
 
 import org.ejml.data.FixedMatrix2_64F;
 
-public class CircleCollider extends TranslateablePrimitiveCollider {
-	double radius;
+public class CircleCollider extends TranslateablePrimitiveCollider implements ReadableCircle {
+	private double radius;
+	private BoundingBoxInterface boundingBoxInterface;
 	
 	public CircleCollider(double r) {
 		this(0,0,r);
@@ -13,7 +14,19 @@ public class CircleCollider extends TranslateablePrimitiveCollider {
 	
 	public CircleCollider(double x, double y, double r) {
 		super(x,y);
+		if (r <0) {
+			throw new IllegalArgumentException("Radius must be non-negative.");
+		}
 		radius = r;
+		boundingBoxInterface = new BoundingBoxInterface();
+	}
+	
+	public double getCenterX() {
+		return this.position.a1;
+	}
+	
+	public double getCenterY() {
+		return this.position.a2;
 	}
 	
 	public double getRadius() {
@@ -26,10 +39,39 @@ public class CircleCollider extends TranslateablePrimitiveCollider {
 		MatrixUtilities.setVector2(this.position,  dst);
 		return dst;
 	}
+
+	@Override
+	public ReadableCircle getBoundingCircle() {
+		return this;
+	}
+
+	@Override
+	public ReadableAABB getBoundingBox() {
+		return boundingBoxInterface;
+	}
 	
-	public static boolean collides(CircleCollider A, CircleCollider B) {
-		double distance = MatrixUtilities.distance(A.position, B.position);
-		return distance <= A.getRadius() + B.getRadius();
+	private class BoundingBoxInterface implements ReadableAABB {
+
+		@Override
+		public double getMinX() {
+			return getCenterX() - getRadius();
+		}
+
+		@Override
+		public double getMaxX() {
+			return getCenterX() + getRadius();
+		}
+
+		@Override
+		public double getMinY() {
+			return getCenterY() - getRadius();
+		}
+
+		@Override
+		public double getMaxY() {
+			return getCenterY() + getRadius();
+		}
+		
 	}
 	
 }
