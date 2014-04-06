@@ -13,7 +13,7 @@ public class Mob extends Unit {
 	protected double curnetMovmentSpeed;
 	
 	public Mob(double hp){
-		this(hp,ArmorType.normal, null);
+		this(hp,ArmorType.NORMAL, null);
 	}
 
 	public Mob(double hp,ArmorType armorType,LinkedList <Ability> abilities){

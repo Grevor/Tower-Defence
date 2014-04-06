@@ -9,6 +9,10 @@ public interface Effectebul {
 	 */
 	public void changeMovmentSpeed(double modifire);
 	/**
+	 * @param change Movment Speed whit modifire % 
+	 */
+	public void changeDamgePercent(double modifire);
+	/**
 	 * @param  @param change Attack Speed whit modifire %
 	 */
 	public void changeAttackSpeed(double modifire);

@@ -8,7 +8,7 @@ import model.types.ArmorType;
 public class Tower extends Unit {
 
 	public Tower(double hp){
-		this(hp,ArmorType.normal, null);
+		this(hp,ArmorType.NORMAL, null);
 	}
 
 	public Tower(double hp,ArmorType armorType,LinkedList <Ability> abilities){
@@ -19,6 +19,8 @@ public class Tower extends Unit {
 	public void changeMovmentSpeed(double modifire) {
 		return;
 	}
+
+
 	
 	
 }

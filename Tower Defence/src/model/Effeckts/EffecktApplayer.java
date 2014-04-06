@@ -8,7 +8,7 @@ public class EffecktApplayer {
 	double movmentSpeed;
 	double attackSpeed;
 	double hp;
-	
+	double attackDamge;
 	
 	
 	/**
@@ -21,15 +21,26 @@ public class EffecktApplayer {
 		movmentSpeed = 0;
 		attackSpeed = 0;
 		hp = 0;
-
+		attackDamge = 0;
 		IterateEffeckts(effectebul, time);
 		
 		
 		if (effectebul.changeHp(hp)){
 			return true;
 		}
+		if (attackSpeed > 0){
 		effectebul.changeAttackSpeed(attackSpeed);
-		effectebul.changeMovmentSpeed(movmentSpeed);
+		}else {
+			effectebul.changeAttackSpeed(0);}		
+		if (movmentSpeed > 0){
+				effectebul.changeMovmentSpeed(movmentSpeed);
+			}else {
+				effectebul.changeMovmentSpeed(0);}
+		
+		if (attackDamge > 0){
+			effectebul.changeDamgePercent(attackDamge);
+		}else {
+			effectebul.changeDamgePercent(0);}
 		return false;
 	}
 
@@ -48,10 +59,13 @@ public class EffecktApplayer {
 				hp += effect.getValue();
 				break;
 			case ATTACK_SPEED:
-				attackSpeed -= effect.getValue();
+				attackSpeed += effect.getValue();
 				break;
 			case MOVMENT_SPEED:
-				movmentSpeed -= effect.getValue();
+				movmentSpeed += effect.getValue();
+				break;
+			case ATTACK_DAMAGE:
+				attackDamge += effect.getValue();
 				break;
 			default:
 				throw new IllegalArgumentException("invalid effeckt " + effect.getType());

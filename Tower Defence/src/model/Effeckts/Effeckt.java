@@ -11,6 +11,12 @@ public class Effeckt {
 	double duration;
 	double value;
 	
+	/**
+	 * @param type
+	 * @param radius
+	 * @param damageType
+	 * @param value
+	 */
 	public Effeckt(EffecktType type,double radius,DamageType damageType, double value) {
 		this.type = type;
 		this.radius = radius;

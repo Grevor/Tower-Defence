@@ -10,11 +10,12 @@ import model.types.ArmorType;
 public abstract class Unit extends HealtObject implements Effectebul {
 
 	 
-	
+	protected UnitType unitType;
 	protected ArmorType armorType;
 	protected LinkedList <Ability> abilities;
 	protected LinkedList <Effeckt> effects;
 	protected double coldwonReduction;
+	protected double damgeModifire;
 	private double size;
 	
 	
@@ -85,6 +86,11 @@ public abstract class Unit extends HealtObject implements Effectebul {
 	
 	public double getSize(){
 		return size;
+	}
+	
+	@Override
+	public void changeDamgePercent(double modifire) {
+		damgeModifire = modifire;
 	}
 	
 }
