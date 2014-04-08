@@ -1,16 +1,13 @@
 package unit;
 
+import java.awt.Window.Type;
 import java.util.LinkedList;
 
 import model.Entity;
-import model.HealthObject;
 import model.HpObjeckt;
 import model.Effeckts.Effeckt;
 import model.Effeckts.EffecktUppdater;
-import model.Effeckts.Effectebul;
-import model.abilities.Ability;
 import model.collision.Collider;
-import model.types.ArmorType;
 
 public abstract class Unit extends Entity {
 
@@ -18,10 +15,13 @@ public abstract class Unit extends Entity {
 
 	protected LinkedList <Effeckt> effects;
 	protected UnitStats unitStats;
+	protected Team team;
+	protected Type type;
 
-
-	public Unit(UnitStats unitStats,HpObjeckt hpObjeckt){
+	public Unit(UnitStats unitStats,HpObjeckt hpObjeckt,Team team, Type type){
 		this.unitStats = new UnitStats(unitStats,hpObjeckt);
+		this.team = team;
+		this.type = type;
 	}
 
 

@@ -1,7 +1,6 @@
 package model.Effeckts;
 
 import model.types.ArmorType;
-import model.types.DamageType;
 
 
 public interface Effectebul {
