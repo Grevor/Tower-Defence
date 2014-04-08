@@ -2,12 +2,13 @@ package model;
 
 import model.collision.Collider;
 
-public class HealtObject extends Entity{
-	protected double hp;
-	protected double maxHp;
+public class HealthObject extends Entity{
+	protected HpObjeckt hpObjeckt;
 	
-	
-	
+
+	public HealthObject(HpObjeckt hpObjeckt){
+		this.hpObjeckt = new  HpObjeckt(hpObjeckt); 
+	}
 	
 	@Override
 	public Collider getCollider() {
@@ -17,12 +18,11 @@ public class HealtObject extends Entity{
 
 
 
-
 	@Override
 	public boolean exist() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
-
+	
 }

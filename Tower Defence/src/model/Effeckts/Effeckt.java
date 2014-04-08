@@ -36,4 +36,8 @@ public class Effeckt {
 	public EffecktType getType() {
 		return type;
 	}
+	
+	public DamageType getDamgeType(){
+		return damageType;
+	}
 }			

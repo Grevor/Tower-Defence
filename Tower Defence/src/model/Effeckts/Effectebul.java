@@ -1,6 +1,8 @@
 package model.Effeckts;
 
-import java.util.LinkedList;
+import model.types.ArmorType;
+import model.types.DamageType;
+
 
 public interface Effectebul {
 
@@ -24,9 +26,19 @@ public interface Effectebul {
 	/**
 	 * @return get all the effeckts on objeckt
 	 */
-	public LinkedList<Effeckt> getEffects();
+	//public LinkedList<Effeckt> getEffects();
 	/**
 	 * @param effect add an effect on objeckts
 	 */
-	public void addEffect(Effeckt effect);
+	//public void addEffect(Effeckt effect);
+	/**
+	 * 
+	 */
+	public boolean canBeHealed();
+	
+	
+	public ArmorType getArmorType();
+	
+	
+
 }

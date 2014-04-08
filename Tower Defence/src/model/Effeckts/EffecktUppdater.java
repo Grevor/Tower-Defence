@@ -1,9 +1,10 @@
 package model.Effeckts;
 
 
+import java.util.LinkedList;
 import java.util.ListIterator;
 
-public class EffecktApplayer {
+public class EffecktUppdater {
 
 	double movmentSpeed;
 	double attackSpeed;
@@ -17,12 +18,12 @@ public class EffecktApplayer {
 	 * @param time of the uppdate
 	 * @return ture if the object is dead
 	 */
-	public boolean uppdate(Effectebul effectebul,Long time){
+	public boolean uppdate(Effectebul effectebul,Long time, LinkedList <Effeckt> effects){
 		movmentSpeed = 0;
 		attackSpeed = 0;
 		hp = 0;
 		attackDamge = 0;
-		IterateEffeckts(effectebul, time);
+		IterateEffeckts(effectebul, time,effects);
 		
 		
 		if (effectebul.changeHp(hp)){
@@ -46,16 +47,17 @@ public class EffecktApplayer {
 
 
 
-	private void IterateEffeckts(Effectebul effectebul, Long time) {
-		ListIterator <Effeckt> iterator =  effectebul.getEffects().listIterator();
+	private void IterateEffeckts(Effectebul effectebul, Long time, LinkedList <Effeckt> effects) {
+		ListIterator <Effeckt> iterator =  effects.listIterator();
 		while (iterator.hasNext()){
 			
 			Effeckt effect = iterator.next();
 			switch (effect.getType()) {
 			case DAMAGE:
-				hp -= effect.getValue();
+				hp -= DamgeCalculator.damge(effect.getValue(),effect.getDamgeType(),effectebul.getArmorType());
 				break;
 			case HEAL:
+				if(effectebul.canBeHealed())
 				hp += effect.getValue();
 				break;
 			case ATTACK_SPEED:
