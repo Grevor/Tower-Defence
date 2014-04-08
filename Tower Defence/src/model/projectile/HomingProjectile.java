@@ -11,9 +11,9 @@ import org.ejml.data.FixedMatrix2_64F;
 public class HomingProjectile extends Projectile {
 
 	Entity target;
-	
-	public HomingProjectile(LinkedList<Effeckt> effeckts, double speed, FixedMatrix2_64F position, Entity target) {
-		super(effeckts, speed,position);
+
+	public HomingProjectile(LinkedList<Effeckt> effeckts, double speed,double size, FixedMatrix2_64F position, Entity target) {
+		super(effeckts, speed,size,position);
 		this.target = target;
 	}
 

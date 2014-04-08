@@ -14,12 +14,12 @@ public abstract class Projectile extends Entity {
 
 	private LinkedList <Effeckt> effeckts;
 	double speed;
-
-	
-	public Projectile(LinkedList <Effeckt> effeckts, double speed, FixedMatrix2_64F position) {
+	double size;
+	public Projectile(LinkedList <Effeckt> effeckts, double speed,double size, FixedMatrix2_64F position) {
 		this.effeckts = effeckts;
 		this.speed = speed;
 		this.position = position;
+		this.size = size;
 	}
 
 	public abstract void update(Long time);

@@ -18,7 +18,9 @@ public class LineAbility extends Ability {
 
 
 	public Projectile newProjectile(FixedMatrix2_64F position, FixedMatrix2_64F target) {
-		return new LineProjectile(effect, speed, position, target); 			
+		//TODO size
+		int size = 0;
+		return new LineProjectile(effect, speed,size, position, target); 			
 	}
 	
 	

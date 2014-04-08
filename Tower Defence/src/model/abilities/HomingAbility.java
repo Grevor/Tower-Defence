@@ -16,7 +16,7 @@ public class HomingAbility extends Ability {
 	}
 	
 	public Projectile newProjectile(FixedMatrix2_64F position, Entity target) {
-		return new HomingProjectile(effect, speed, position, target); 			
+		return new HomingProjectile(effect, speed,0, position, target); 			
 	}
 	
 	public Projectile use(FixedMatrix2_64F position, Entity target){

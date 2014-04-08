@@ -11,8 +11,8 @@ public class LineProjectile  extends Projectile  {
 
 	FixedMatrix2_64F target;
 	
-	public LineProjectile(LinkedList<Effeckt> effeckts, double speed, FixedMatrix2_64F position, FixedMatrix2_64F target) {
-		super(effeckts, speed,position);
+	public LineProjectile(LinkedList<Effeckt> effeckts, double speed,double size, FixedMatrix2_64F position, FixedMatrix2_64F target) {
+		super(effeckts, speed,size,position);
 		this.target = target;
 	}
 
