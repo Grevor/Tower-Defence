@@ -7,6 +7,7 @@ public class DamgeCalculator {
 
 	
 	
+	
 	public static double damge (double damge,DamageType damageType, ArmorType armorType){
 		switch (damageType){
 		case NORMAL:
