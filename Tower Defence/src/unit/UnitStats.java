@@ -7,7 +7,6 @@ import model.HpObjeckt;
 import model.Effeckts.Effectebul;
 import model.abilities.Ability;
 import model.types.ArmorType;
-import model.types.DamageType;
 
 public class UnitStats extends HealthObject implements Effectebul {
 

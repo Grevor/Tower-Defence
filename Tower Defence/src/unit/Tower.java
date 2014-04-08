@@ -1,13 +1,15 @@
 package unit;
 
+import java.awt.Window.Type;
+
 import model.HpObjeckt;
-import model.collision.Collider;
+
 
 
 public class Tower extends Unit {
 
-	public Tower(UnitStats unitStats,HpObjeckt hpObjeckt){
-		super(unitStats, hpObjeckt);
+	public Tower(UnitStats unitStats,HpObjeckt hpObjeckt, Team team,Type type){
+		super(unitStats, hpObjeckt,team,type);
 	}
 		
 }
