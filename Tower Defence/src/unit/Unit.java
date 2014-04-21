@@ -7,11 +7,8 @@ import model.Entity;
 import model.HpObjeckt;
 import model.Effeckts.Effeckt;
 import model.Effeckts.EffecktUppdater;
-import model.collision.Collider;
 
 public abstract class Unit extends Entity {
-
-
 
 	protected LinkedList <Effeckt> effects;
 	protected UnitStats unitStats;
@@ -35,11 +32,5 @@ public abstract class Unit extends Entity {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-	@Override
-	public Collider getCollider() {
-		// TODO Auto-generated method stub
-		return null;
-	}	
 
 }

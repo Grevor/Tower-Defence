@@ -1,6 +1,6 @@
 package model.collision;
 
-public class CollisionTypes {
+public class CollisionLayers {
 	public static final long	GROUND	= enumerationToFlag(Enumerations.GROUND),
 										AIR = enumerationToFlag(Enumerations.AIR),
 										GROUND_PROJECTILE = enumerationToFlag(Enumerations.GROUND_PROJECTILE),

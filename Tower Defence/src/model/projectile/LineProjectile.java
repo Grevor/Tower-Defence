@@ -2,10 +2,9 @@ package model.projectile;
 
 import java.util.LinkedList;
 
-import org.ejml.data.FixedMatrix2_64F;
-
 import model.Effeckts.Effeckt;
-import model.collision.Collider;
+
+import org.ejml.data.FixedMatrix2_64F;
 
 public class LineProjectile  extends Projectile  {
 
@@ -26,12 +25,6 @@ public class LineProjectile  extends Projectile  {
 	public boolean exist() {
 		// TODO Auto-generated method stub
 		return false;
-	}
-
-	@Override
-	public Collider getCollider() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }
